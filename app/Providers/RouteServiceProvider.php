@@ -38,6 +38,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes();
 
         $this->mapWebRoutes();
+        $this->mapBackendRoutes();
 
         //
     }
@@ -64,7 +65,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapAdminRoutes()
+    protected function mapBackendRoutes()
     {
         Route::group([
             'middleware' => 'auth',
