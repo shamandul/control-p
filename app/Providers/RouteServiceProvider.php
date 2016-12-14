@@ -58,6 +58,22 @@ class RouteServiceProvider extends ServiceProvider
             require base_path('routes/web.php');
         });
     }
+    /**
+     *
+     * Estas son utilizadas en el backend
+     *
+     * @return void
+     */
+    protected function mapAdminRoutes()
+    {
+        Route::group([
+            'middleware' => 'auth',
+            'prefix' => 'admin',
+            'namespace' => $this->namespace,
+        ], function ($router) {
+            require base_path('routes/backend.php');
+        });
+    }
 
     /**
      * Define the "api" routes for the application.
