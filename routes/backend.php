@@ -1,4 +1,4 @@
 <?php
 // Archivo de rutas para el administrador
 
-Route::get('/home', 'HomeController@index');
+Route::get('/panel', 'AdminController@index');
