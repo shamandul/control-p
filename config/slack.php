@@ -13,7 +13,7 @@ return [
   |
   */
 
-  'endpoint' => '',
+  'endpoint' => 'https://hooks.slack.com/services/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',
 
   /*
   |-------------------------------------------------------------
@@ -107,7 +107,7 @@ return [
   |
   | Which attachment fields should be interpreted in Slack's Markdown-like
   | language. By default, Slack assumes that no fields in an attachment
-  | should be formatted as Markdown. 
+  | should be formatted as Markdown.
   |
   */
 
