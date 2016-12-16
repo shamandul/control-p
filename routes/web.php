@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/slack', 'SlackController@index');
 
 Auth::routes();
 
