@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::get('/slack', 'SlackController@index');
 Route::get('/registro/email/{token}', 'Auth\RegisterController@confirmEmail');
+Route::get('/pdf', 'PdfController@reporteUsers');
 
 Auth::routes();
 
