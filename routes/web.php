@@ -16,8 +16,11 @@ Route::get('/', function () {
 });
 Route::get('/slack', 'SlackController@index');
 Route::get('/registro/email/{token}', 'Auth\RegisterController@confirmEmail');
-Route::get('/pdf', 'PdfController@reporteUsers');
-
+Route::get('/pdf', 'PdfController@crearPdf');
+Route::get('/test/', function () {
+  $pdf = PDF::loadView('pdf.reporte_users');
+  return $pdf->download('pruebapdf.pdf');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

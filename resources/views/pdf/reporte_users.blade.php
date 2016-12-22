@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/app.css" rel="stylesheet">
     <title>Lista de usuarios</title>
   </head>
   <body>
@@ -11,7 +14,7 @@
     <section>
       <table class="table table-bordered">
         <thead>
-          <tr>
+          <tr class="success">
             <td>Nombre</td>
             <td>Email</td>
             <td>Rol</td>
@@ -19,16 +22,13 @@
         </thead>
         <tbody>
           <tr>
-            {{-- <td>{{$datos['name']}}</td>
-            <td>{{$datos['email']}}</td>
-            <td>{{$datos['role']}}</td> --}}
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            @foreach ($datos as $dato)
+              <td>{{$dato['name']}}</td>
+              <td>{{$dato['email']}}</td>
+              <td>{{$dato['role']}}</td>
+            @endforeach
           </tr>
         </tbody>
-
-
 
       </table>
     </section>
