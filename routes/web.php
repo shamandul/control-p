@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,10 +7,8 @@ Route::get('/', function () {
 Route::get('/slack', 'SlackController@index');
 Route::get('/registro/email/{token}', 'Auth\RegisterController@confirmEmail');
 Route::get('/pdf', 'PdfController@crearPdf');
-Route::get('/test/', function () {
-  $pdf = PDF::loadView('pdf.reporte_users');
-  return $pdf->download('pruebapdf.pdf');
-});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::match(['get','post'], '/falta/insertar', 'Database\DefaultController@insertar');
