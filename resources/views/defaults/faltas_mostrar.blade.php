@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-      <table class="table table-bordered">
+      <table class="table table-bordered table-responsive">
         <thead>
           <tr class="success">
             <td>Tipo</td>
@@ -18,9 +18,10 @@
               <td>{{$dato['factor']}}</td>
               <td>{{$dato['num_faltas']}}</td>
               <td>{{$dato['comentario']}}</td>
+              <td class="text-center"><a class="btn btn-info" href='{{url("/falta/update/{$dato->id}")}}'>Editar</a></td>
+              <td class="text-center"><a class="btn btn-danger" href='{{url("/falta/delete/{$dato->id}")}}'>Borrar</a></td>
             </tr>
             @endforeach
-          
         </tbody>
 
       </table>
