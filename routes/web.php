@@ -16,4 +16,5 @@ Route::get('/falta/update/{seleccion}', 'Database\DefaultController@modificarGet
 Route::get('/falta/delete/{seleccion}', 'Database\DefaultController@delete');
 Route::post('/falta/guardar/{seleccion}', 'Database\DefaultController@modificarPut');
 Route::get('/falta/show', 'Database\DefaultController@show');
-Route::resource('holiday', 'Database\HolidayController');
+Route::resource('vacaciones', 'Database\HolidayController', ['only'=>['create', 'show', 'edit']]);
+Route::post('/vacaciones/store', 'Database\HolidayController@store');
