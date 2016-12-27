@@ -12,3 +12,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::match(['get','post'], '/falta/insertar', 'Database\DefaultController@insertar');
+Route::get('/falta/modificar/{seleccion}', 'Database\DefaultController@modificarGet');
+Route::post('/falta/guardar/{seleccion}', 'Database\DefaultController@modificarPut');
+Route::get('/falta/show', 'Database\DefaultController@show');
+Route::resource('holiday', 'Database\HolidayController');

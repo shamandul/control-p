@@ -21,13 +21,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
             @foreach ($datos as $dato)
+            <tr>
               <td>{{$dato['name']}}</td>
               <td>{{$dato['email']}}</td>
               <td>{{$dato['role']}}</td>
+            </tr>
             @endforeach
-          </tr>
         </tbody>
 
       </table>
