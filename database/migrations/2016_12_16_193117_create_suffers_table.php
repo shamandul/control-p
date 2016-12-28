@@ -17,6 +17,8 @@ class CreateSuffersTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('falta_id')->unsigned();
+            $table->date('dateStart');
+            $table->date('dateEnd');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('falta_id')->references('id')->on('faltas')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

@@ -21,7 +21,7 @@
               <td>{{$dato['maxDay']}}</td>
               <td>{{$dato['Enjoyed']}}</td>
               <td>{{$dato['comment']}}</td>
-              <td class="text-center"><a class="btn btn-info" href='{{url("/vacaciones/update/{$dato->id}")}}'>Editar</a></td>
+              <td class="text-center"><a class="btn btn-info" href='{{url("/vacaciones/{$dato->id}/edit")}}'>Editar</a></td>
               <td class="text-center"><a class="btn btn-danger" href='{{url("/vacaciones/delete/{$dato->id}")}}'>Borrar</a></td>
             </tr>
             @endforeach
