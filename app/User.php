@@ -37,4 +37,10 @@ class User extends Authenticatable
       $this->token = str_random(200);
       $this->save();
     }
+    public function admin(){
+      return $this->role ==='admin';
+    }
+    public function supervisor(){
+      return $this->role ==='supervisor';
+    }
 }
