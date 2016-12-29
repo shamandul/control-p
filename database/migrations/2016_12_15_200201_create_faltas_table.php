@@ -21,6 +21,7 @@ class CreateFaltasTable extends Migration
           $table->string('comentario' , '250');
           $table->timestamps();
         });
+
     }
 
     /**

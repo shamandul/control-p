@@ -12,4 +12,9 @@ class Falta extends Model
   protected $fillable = [
       'tipo', 'factor', 'num_faltas','comentario',
   ];
+  public function users(){
+    return $this->belongsToMany('App\User')
+    ->withPivot('dateStart','dateEnd')
+    ->withTimestamps();
+  }
 }

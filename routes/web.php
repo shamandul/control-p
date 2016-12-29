@@ -11,7 +11,7 @@ Route::get('/pdf', 'PdfController@crearPdf');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::group(['middleware' => 'admin'], function(){
+Route::group(['middleware' => ['auth','admin']], function(){
   // Faltas
   Route::match(['get','post'], '/falta/insertar', 'Database\DefaultController@insertar');
   Route::get('/falta/update/{seleccion}', 'Database\DefaultController@modificarGet');
