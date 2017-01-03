@@ -13,7 +13,7 @@ class Falta extends Model
       'tipo', 'factor', 'num_faltas','comentario',
   ];
   public function users(){
-    return $this->belongsToMany('App\User')
+    return $this->belongsToMany('App\User', 'suffers')
     ->withPivot('dateStart','dateEnd')
     ->withTimestamps();
   }

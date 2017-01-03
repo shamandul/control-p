@@ -44,7 +44,7 @@ class User extends Authenticatable
       return $this->role ==='supervisor';
     }
     public function faltas(){
-      return $this->belongsToMany('App\models\Falta')
+      return $this->belongsToMany('App\models\Falta', 'suffers')
       ->withPivot('dateStart','dateEnd')
       ->withTimestamps();
     }

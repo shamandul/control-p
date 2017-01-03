@@ -23,4 +23,7 @@ Route::group(['middleware' => ['auth','admin']], function(){
   Route::post('/vacaciones/store', 'Database\HolidayController@store');
   Route::post('/vacaciones/update/{id}', 'Database\HolidayController@update');
   Route::get('/vacaciones/delete/{id}', 'Database\HolidayController@destroy');
+  // Gestion Falta Usuario
+  Route::resource('gestion-faltas', 'Database\GestionFaltaUsuarioController', ['only'=>['create', 'show', 'edit']]);
+  Route::post('gestion-faltas/store', 'Database\GestionFaltaUsuarioController@store');
 });
