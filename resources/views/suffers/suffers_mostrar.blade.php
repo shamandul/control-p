@@ -14,12 +14,11 @@
         </thead>
         <tbody>
             @foreach ($datos as $dato)
-
              <tr>
               <td>{{$dato->name}}</td>
               <td>{{$dato->tipo}}</td>
-              <td>{{$dato->dateStart}}</td>
-              <td>{{$dato->dateEnd}}</td>
+              <td>{{date('j-m-Y', strtotime($dato->dateStart))}}</td>
+              <td>{{date('j-m-Y', strtotime($dato->dateEnd))}}</td>
               <td class="text-center">
                 <a class="btn btn-info" href='{{url("/gestion-faltas/{$dato->id}/edit")}}'>Editar</a>
                 <a class="btn btn-danger" href='{{url("/gestion-faltas/delete/{$dato->id}")}}'>Borrar</a>
