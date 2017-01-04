@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading"><h3>Gestionar las faltas de usuarios</h3></div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" action="{{url('/gestion-faltas/store')}}" method="post">
+                    <form class="form-horizontal" role="form" action='{{url("/gestion-faltas/update/{$datos->id}")}}' method="post">
                       {{ csrf_field() }}
                       @include('suffers.form')
                     </form>

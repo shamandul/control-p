@@ -26,4 +26,6 @@ Route::group(['middleware' => ['auth','admin']], function(){
   // Gestion Falta Usuario
   Route::resource('gestion-faltas', 'Database\GestionFaltaUsuarioController', ['only'=>['create', 'show', 'edit']]);
   Route::post('gestion-faltas/store', 'Database\GestionFaltaUsuarioController@store');
+  Route::post('gestion-faltas/update/{id}', 'Database\GestionFaltaUsuarioController@update');
+  Route::get('gestion-faltas/delete/{id}', 'Database\GestionFaltaUsuarioController@destroy');
 });
